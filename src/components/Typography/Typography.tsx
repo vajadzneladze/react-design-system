@@ -22,6 +22,10 @@ const Typography = ({ content , variant, weight, children }: TypographyProps) =>
         return <h3 style = {{  fontWeight: weight  }}>  {  children }  </h3>
     }
 
+    if(variant === 'h6') {
+        return <h6 style = {{  fontWeight: weight  }}>  {  children }  </h6>
+    }
+
     return <h4 style = {{  fontWeight: weight  }}>  {  children }  <span> success </span>  </h4>
 };
 
