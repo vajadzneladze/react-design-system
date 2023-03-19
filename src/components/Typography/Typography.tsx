@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 export interface TypographyProps {
     content: string,
@@ -6,6 +7,13 @@ export interface TypographyProps {
     weight:  string,
     children: string
 }
+
+const StatusComponent = styled.span`
+    display:block;
+    padding:5px 10px;
+    background:skyblue;
+    color:white;
+`;
 
 const Typography = ({ content , variant, weight, children }: TypographyProps) => {
 
@@ -21,7 +29,7 @@ const Typography = ({ content , variant, weight, children }: TypographyProps) =>
         return <h3 style = {{  fontWeight: weight  }}>  {  children }  </h3>
     }
 
-    return <h4 style = {{  fontWeight: weight  }}>  {  children }  </h4>
+    return <h4 style = {{  fontWeight: weight  }}>  {  children }  <StatusComponent> success </StatusComponent>  </h4>
 };
 
 export default Typography;
